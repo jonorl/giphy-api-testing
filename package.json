@@ -1,7 +1,7 @@
 {
-  "name": "dropdownmenu",
+  "name": "giphyapitesting",
   "version": "1.0.0",
-  "description": "dropdown menu for Project Odin",
+  "description": "Giphy API testing for The Odin Project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
