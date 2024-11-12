@@ -24,3 +24,9 @@ img {
   height: fit-content;
   width:fit-content
 }
+
+input {
+  justify-self: center;
+  height: fit-content;
+  width:fit-content
+}
