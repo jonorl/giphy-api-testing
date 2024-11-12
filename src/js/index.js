@@ -7,10 +7,13 @@ const randomBtn = document.querySelector("#random-cat-button");
 const searchBtn = document.querySelector("#search-cat-button");
 const input = document.querySelector("input");
 
+// Global function
+
+fetchRandomCatGif();
+
 // Event listeners
 
-fetchCatGif();
-randomBtn.addEventListener("click", fetchCatGif);
+randomBtn.addEventListener("click", fetchRandomCatGif);
 searchBtn.addEventListener("click", () => {
   fetch(
     `https://api.giphy.com/v1/gifs/translate?api_key=pOslsruwcUp3D8BDLDebOYkF0yvwfpDf&s=${input.value}`,
@@ -21,12 +24,19 @@ searchBtn.addEventListener("click", () => {
     })
     .then(function (response) {
       img.src = response.data.images.original.url;
+    })
+    .catch(function () {
+      err();
     });
 });
 
 // Aux Functions
 
-function fetchCatGif() {
+function err() {
+  alert("You must enter a value");
+}
+
+function fetchRandomCatGif() {
   fetch(
     "https://api.giphy.com/v1/gifs/translate?api_key=pOslsruwcUp3D8BDLDebOYkF0yvwfpDf&s=cats",
     { mode: "cors" }
