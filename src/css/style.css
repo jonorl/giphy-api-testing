@@ -9,7 +9,6 @@
 
 .container {
   display: grid;
-  grid-template-rows: 0.1fr 1fr;
   gap: 4vh;
 }
 
