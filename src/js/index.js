@@ -24,6 +24,7 @@ searchBtn.addEventListener("click", () => {
       );
       const catData = await response.json();
       img.src = catData.data.images.original.url;
+    // eslint-disable-next-line no-unused-vars
     } catch (error) {
       err();
     }
